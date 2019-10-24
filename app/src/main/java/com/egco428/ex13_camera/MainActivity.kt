@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE) //เอาภาพกลับมาหน้า Main
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode==REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK){
             val extras = data.extras
@@ -44,5 +44,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    
+
 }
